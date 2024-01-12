@@ -1,0 +1,43 @@
+@import "./scss/functions";
+@import "./scss/variables";
+
+$new-dark: #141414;
+
+
+$new-theme-colors: (
+  'dark': $new-dark,
+  'grigio': #808080 
+);
+
+
+.icosize {
+font-size: 15px;
+padding: 4px;
+}
+
+.picContainer {position:relative;}
+.pic2 {position:absolute; top:0px; left:0px;}
+
+.sliderImg {
+    max-width: 100%;
+    height: auto;
+  }
+
+.icofooter{
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+.anima {
+    transition: transform 0.3s ease;
+  
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  
+$theme-colors: map-merge($theme-colors, $new-theme-colors);
+
+
+@import 'scss/bootstrap.scss';
+
